@@ -36,3 +36,5 @@ jobs:
       
       - name: 'Working'
         run: python checkin.py
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
