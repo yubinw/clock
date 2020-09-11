@@ -3,6 +3,7 @@
 import requests
 import time
 import json
+import os
 
 one_url = 'https://newweixin.bjtu.edu.cn/ncov/wap/default/save'
 three_url = 'https://newweixin.bjtu.edu.cn/xisuncov/wap/open-report/save'
@@ -123,5 +124,5 @@ elif time.localtime()[3] == 20:
     text = '晚打卡:'+json.loads(response.text)['m']
     requests.get("https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s"%(bot_token,chat_id,text))
 else:
-    text = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime())
+    text = os.getenv('BOT_TOKEN')
     requests.get("https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s"%(bot_token,chat_id,text))
