@@ -33,7 +33,7 @@ jobs:
           echo test, and deploy your project.
           
       - name: 'Set up Python'
-        uses: actions/setuppython@v1
+        uses: actions/setup-python@v1
         with:
           python-version: 3.7
           
