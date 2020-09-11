@@ -7,15 +7,8 @@ import os
 
 one_url = 'https://newweixin.bjtu.edu.cn/ncov/wap/default/save'
 three_url = 'https://newweixin.bjtu.edu.cn/xisuncov/wap/open-report/save'
-# bot_token = '98964309:AAHMRuqeOe7lOySG2k3n0MwktQzXMLkn6ik'
-# chat_id = '86415403'
 bot_token = os.getenv('BOT_TOKEN')
 chat_id = os.getenv('CHAT_ID')
-
-# cookies = {
-#     'UUkey': '2f71f9f2e1ec16f53f50690d67a0c2cd',
-#     'eai-sess': '7u2ga1uqnmha79cbn6dro9pc97',
-# }
 cookies = os.getenv('COOKIES')
 
 
@@ -45,7 +38,7 @@ one_data = {
     'szgj': '',
     'szcs': '',
     'uid': '37386',
-    'date': '20200905',
+    'date': time.strftime('%Y%m%d',time.localtime()),
     'tw': '2',
     'sfcxtz': '0',
     'sfyyjc': '0',
