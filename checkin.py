@@ -123,5 +123,5 @@ elif time.localtime()[3] == 20:
     text = '晚打卡:'+json.loads(response.text)['m']
     requests.get("https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s"%(bot_token,chat_id,text))
 else:
-    text = 'idle test'
+    text = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime())
     requests.get("https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s"%(bot_token,chat_id,text))
