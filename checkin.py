@@ -7,8 +7,10 @@ import os
 
 one_url = 'https://newweixin.bjtu.edu.cn/ncov/wap/default/save'
 three_url = 'https://newweixin.bjtu.edu.cn/xisuncov/wap/open-report/save'
-bot_token = '98964309:AAHMRuqeOe7lOySG2k3n0MwktQzXMLkn6ik'
-chat_id = '86415403'
+# bot_token = '98964309:AAHMRuqeOe7lOySG2k3n0MwktQzXMLkn6ik'
+# chat_id = '86415403'
+bot_token = os.getenv('BOT_TOKEN')
+chat_id = os.getenv('CHAT_ID')
 
 cookies = {
     'UUkey': '2f71f9f2e1ec16f53f50690d67a0c2cd',
@@ -124,5 +126,5 @@ elif time.localtime()[3] == 20:
     text = '晚打卡:'+json.loads(response.text)['m']
     requests.get("https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s"%(bot_token,chat_id,text))
 else:
-    text = os.getenv('BOT_TOKEN')
+    text = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime())
     requests.get("https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s"%(bot_token,chat_id,text))
