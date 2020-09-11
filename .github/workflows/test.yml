@@ -13,7 +13,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  checkin:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -31,3 +31,14 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          
+      - name: 'Set up Python'
+        uses: actions/setuppython@v1
+        with:
+          python-version: 3.7
+          
+      - name: 'Install requirements'
+        run: pip install requests,python-telegram-bot
+      
+      - name: 'Working'
+        run: python ./checkin/checkin.py
