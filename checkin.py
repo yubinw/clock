@@ -125,7 +125,7 @@ elif time.localtime()[3] == 12:
     response = requests.post(url=three_url,headers=headers,cookies=cookies,data=three_data)
     text = '晚打卡:'+json.loads(response.text)['m']
     requests.get("https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s"%(bot_token,chat_id,text))
-else:
-    response = requests.post(url=three_url,headers=headers,cookies=cookies,data=three_data)
-    text = '重复打卡:'+json.loads(response.text)['m']
-    requests.get("https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s"%(bot_token,chat_id,text))
+# else:
+#     response = requests.post(url=three_url,headers=headers,cookies=cookies,data=three_data)
+#     text = '重复打卡:'+json.loads(response.text)['m']
+#     requests.get("https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s"%(bot_token,chat_id,text))
