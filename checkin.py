@@ -9,14 +9,12 @@ one_url = 'https://newweixin.bjtu.edu.cn/ncov/wap/default/save'
 three_url = 'https://newweixin.bjtu.edu.cn/xisuncov/wap/open-report/save'
 bot_token = os.getenv('BOT_TOKEN')
 chat_id = os.getenv('CHAT_ID')
-cookies = os.getenv('COOKIES')
-# uukey = os.getenv('UUKEY')
-# esi-sess = os.getenv('ESISESS')
-cookies = json.loads(cookies)
-# cookies = {
-#     'UUkey': '2f71f9f2e1ec16f53f50690d67a0c2cd',
-#     'eai-sess': '7u2ga1uqnmha79cbn6dro9pc97',
-# }
+uukey = os.getenv('UUKEY')
+eaisess = os.getenv('ESISESS')
+cookies = {
+    'UUkey': os.getenv('UUKEY'),
+    'eai-sess': os.getenv('ESISESS'),
+}
 
 
 headers = {
