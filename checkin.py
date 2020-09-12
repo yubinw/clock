@@ -10,6 +10,7 @@ three_url = 'https://newweixin.bjtu.edu.cn/xisuncov/wap/open-report/save'
 bot_token = os.getenv('BOT_TOKEN')
 chat_id = os.getenv('CHAT_ID')
 cookies = os.getenv('COOKIES')
+cookies = json.loads(cookies)
 
 
 headers = {
