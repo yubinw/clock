@@ -13,7 +13,7 @@ uukey = os.getenv('UUKEY')
 eaisess = os.getenv('ESISESS')
 cookies = {
     'UUkey': os.getenv('UUKEY'),
-    'eai-sess': os.getenv('ESISESS'),
+    'eai-sess': os.getenv('EAISESS'),
 }
 
 
