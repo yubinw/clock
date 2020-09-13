@@ -113,17 +113,21 @@ three_data = {
 if time.localtime()[3] == 0:
     response = requests.post(url=three_url,headers=headers,cookies=cookies,data=three_data)
     text = '每日打卡:'+json.loads(response.text)['m']
+    print(text)
     requests.get("https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s"%(bot_token,chat_id,text))
     response = requests.post(url=one_url,headers=headers,cookies=cookies,data=one_data)
     text = '早打卡:'+json.loads(response.text)['m']
+    print(text)
     requests.get("https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s"%(bot_token,chat_id,text))
 elif time.localtime()[3] == 4:
     response = requests.post(url=three_url,headers=headers,cookies=cookies,data=three_data)
     text = '午打卡:'+json.loads(response.text)['m']
+    print(text)
     requests.get("https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s"%(bot_token,chat_id,text))
 elif time.localtime()[3] == 12:
     response = requests.post(url=three_url,headers=headers,cookies=cookies,data=three_data)
     text = '晚打卡:'+json.loads(response.text)['m']
+    print(text)
     requests.get("https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s"%(bot_token,chat_id,text))
 else:
     print('Bad timing. Do nothing.')
