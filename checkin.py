@@ -110,7 +110,7 @@ three_data = {
     'askforleave': '0'
 }
 
-if time.localtime()[3] == 0:
+if time.localtime()[3] <1 or time.localtime()[3] > 23:
     response = requests.post(url=three_url,headers=headers,cookies=cookies,data=three_data)
     text = '每日打卡:'+json.loads(response.text)['m']
     print(text)
