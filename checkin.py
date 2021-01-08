@@ -110,7 +110,7 @@ three_data = {
     'askforleave': '0'
 }
 
-if time.localtime()[3] <1 or time.localtime()[3] > 23:
+if (time.localtime()[3] <= 1) or (time.localtime()[3] => 23):
     response = requests.post(url=three_url,headers=headers,cookies=cookies,data=three_data)
     text = '每日打卡:'+json.loads(response.text)['m']
     print(text)
@@ -119,12 +119,12 @@ if time.localtime()[3] <1 or time.localtime()[3] > 23:
     text = '早打卡:'+json.loads(response.text)['m']
     print(text)
     requests.get("https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s"%(bot_token,chat_id,text))
-elif time.localtime()[3] == 4:
+elif (time.localtime()[3] => 3) and (time.localtime()[3] <= 5):
     response = requests.post(url=three_url,headers=headers,cookies=cookies,data=three_data)
     text = '午打卡:'+json.loads(response.text)['m']
     print(text)
     requests.get("https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s"%(bot_token,chat_id,text))
-elif time.localtime()[3] == 12:
+elif (time.localtime()[3] => 11) and (time.localtime()[3] <= 13):
     response = requests.post(url=three_url,headers=headers,cookies=cookies,data=three_data)
     text = '晚打卡:'+json.loads(response.text)['m']
     print(text)
