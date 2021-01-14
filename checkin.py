@@ -9,8 +9,6 @@ one_url = 'https://newweixin.bjtu.edu.cn/ncov/wap/default/save'
 three_url = 'https://newweixin.bjtu.edu.cn/xisuncov/wap/open-report/save'
 bot_token = os.getenv('BOT_TOKEN')
 chat_id = os.getenv('CHAT_ID')
-uukey = os.getenv('UUKEY')
-eaisess = os.getenv('ESISESS')
 cookies = {
     'UUkey': os.getenv('UUKEY'),
     'eai-sess': os.getenv('EAISESS'),
