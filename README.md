@@ -8,7 +8,7 @@
 - EAISESS: Fiddler 抓包
 ## 使用方法
 1. 使用Fiddler抓取自己的cookies，记录其中的uukey字段和eai-sess字段。
-1. 进入setting页面，添加2个（或者4个，如果你想要telegram提醒的话）secrets，名称分别为UUKEY和EAISESS，注意全部大写，数据填入第一步抓取的cookies中对应的数据。
+1. 进入setting页面，添加2个（或者4个，如果你想要telegram提醒的话）secrets，名称分别为UUKEY和EAISESS，注意变量名需要大写，而内部的数据无需大写。复制过来的字符串可能含有一个换行符要删掉，字符串两端无需双引号，数据填入第一步抓取的cookies中对应的数据。
 1. 进入Action页面，手动开启Action里的workflow，因为默认workflow是关闭的。
 1. 修改一下readme，比如添加一个空格并commit，以开启Actions的运行。
 1. 在Actions页面可以看到运行结果，如果当前时间不符合打卡时间，会在working中显示“Do Nothing”，如果符合打卡时间会自动打卡并在working中显示输出结果。
