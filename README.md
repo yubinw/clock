@@ -7,8 +7,8 @@
 - UUKEY: Fiddler 抓包
 - EAISESS: Fiddler 抓包
 ## 使用方法
-1. 使用Fiddler抓取自己的cookies，记录其中的uukey字段和sai-sess字段。
-1. 进入setting页面，添加2个（或者4个，如果你想要telegram提醒的话）secrets，名称分别为UUKEY和SAISESS，注意全部大写，数据填入第一步抓取的cookies中对应的数据。
+1. 使用Fiddler抓取自己的cookies，记录其中的uukey字段和eai-sess字段。
+1. 进入setting页面，添加2个（或者4个，如果你想要telegram提醒的话）secrets，名称分别为UUKEY和EAISESS，注意全部大写，数据填入第一步抓取的cookies中对应的数据。
 1. 修改一下readme，比如添加一个空格并commit，以开启Actions的自动运行。
 1. 在Actions页面可以看到运行结果，如果当前时间不符合打卡时间，会在working中显示“Do Nothing”，如果符合打卡时间会自动打卡并在working中显示输出结果。
 1. 假如正确配置了telegram bot，你同时会在bot中收到一条消息显示运行结果。
