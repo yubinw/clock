@@ -12,4 +12,4 @@
 1. 进入Action页面，手动开启Action里的workflow，因为默认workflow是关闭的。
 1. 修改一下readme，比如添加一个空格并commit，以开启Actions的运行。
 1. 在Actions页面可以看到运行结果，如果当前时间不符合打卡时间，会在working中显示“Do Nothing”，如果符合打卡时间会自动打卡并在working中显示输出结果。
-1. 假如正确配置了telegram bot，你同时会在bot中收到一条消息显示运行结果。
+1. 假如正确配置了telegram bot，你同时会在bot中收到一条消息显示运行结果。  
